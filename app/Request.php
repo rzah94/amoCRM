@@ -1,5 +1,7 @@
 <?php
 
+namespace app;
+
 class Request
 {
     private $url;
@@ -279,7 +281,7 @@ class Request
         try {
             // Если код ответа не успешный - возвращаем сообщение об ошибке
             if ($code < 200 || $code > 204) {
-                throw new Exception(isset($errors[$code]) ? $errors[$code] : 'Undefined error', $code);
+                throw new \Exception(isset($errors[$code]) ? $errors[$code] : 'Undefined error', $code);
             }
         } catch (\Exception $e) {
             die('Ошибка: ' . $e->getMessage() . PHP_EOL . 'Код ошибки: ' . $e->getCode());

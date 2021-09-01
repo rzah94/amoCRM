@@ -1,5 +1,7 @@
 <?php
 
+namespace app;
+
 class Amo
 {
     private $req;
@@ -627,7 +629,7 @@ class Amo
      */
     public function compareDate($unixtime, $compDate)
     {
-        $date = new DateTime();
+        $date = new \DateTime();
         $date->setTimestamp($unixtime);
 
         if ($date->format('Y-m-d') == $compDate) {
