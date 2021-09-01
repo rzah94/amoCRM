@@ -10,6 +10,7 @@
 *.userosscache
 *.sln.docstates
 AmoIntegration.php
+app/files
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
